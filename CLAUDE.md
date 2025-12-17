@@ -514,6 +514,60 @@ Expect refinement requests. Provide modular outputs that can be easily updated.
 
 ---
 
+# Part XIII: Orchestrator Protocol
+
+## Mandatory Plan Mode Workflow
+
+The **Orchestrator** is activated as the FIRST step in any Plan Mode session. It coordinates all subordinate agents and ensures quality through validation.
+
+### Orchestrator Location
+```
+~/.claude/skills/orchestrator/SKILL.md
+```
+
+### Subordinate Agents
+
+| Agent | Location | Purpose | Trigger |
+|-------|----------|---------|---------|
+| `claude-code-guide` | Built-in | Claude Code capabilities Q&A | "Can Claude...", "How do I..." |
+| `knowledge-researcher` | `~/.claude/agents/` | Deep research, evidence gathering | Research needs, knowledge gaps |
+| `gemini-plan-critic` | `~/.claude/agents/` | Plan validation via Gemini CLI | MANDATORY before any plan |
+| `codex-critic` | `~/.claude/agents/` | Code review via Codex CLI | Code-related plans |
+
+### Workflow
+
+```
+User Request
+    ↓
+[1] ORCHESTRATOR ACTIVATION (mandatory)
+    ├─ Analyze: domain, complexity, risk
+    ├─ Identify knowledge gaps
+    └─ Select required agents
+    ↓
+[2] KNOWLEDGE GATHERING
+    ├─ Admin Q&A? → claude-code-guide
+    └─ Research? → knowledge-researcher
+    ↓
+[3] TASK DECOMPOSITION
+    ├─ MECE breakdown
+    └─ Create via Taskmaster MCP
+    ↓
+[4] VALIDATION
+    ├─ gemini-plan-critic (always)
+    └─ codex-critic (if code)
+    ↓
+[5] PRESENT PLAN
+    └─ User approval
+```
+
+### CLI Tools Integration
+
+- **Gemini**: `gemini "<prompt>"` or `echo "<content>" | gemini "<instruction>"`
+- **Codex**: `codex "<prompt>"` or `echo "<content>" | codex "<instruction>"`
+- **Taskmaster MCP**: `create_task`, `update_task`, `get_tasks`, `complete_task`
+
+---
+
 **End of CLAUDE.md**
 
 *This document is a living artifact. Update as the Cognitive Environment evolves.*

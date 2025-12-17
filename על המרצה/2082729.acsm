@@ -1,0 +1,31 @@
+<fulfillmentToken fulfillmentType="loan" auth="user" xmlns="http://ns.adobe.com/adept">
+  <distributor>urn:uuid:8d9edc79-ee44-4f99-bbe2-89b004c7944f</distributor>
+  <operatorURL>http://drm.ebookshipping.com:8080/fulfillment</operatorURL>
+  <transaction>EB029204877558</transaction>
+  <purchase>2025-12-17T05:36:54+00:00</purchase>
+  <expiration>2026-01-07T05:36:54+00:00</expiration>
+  <resourceItemInfo>
+    <resource>urn:uuid:864b9db2-2749-48e2-a7f7-3d4805348ec7</resource>
+    <resourceItem>1</resourceItem>
+    <metadata>
+      <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">New Laws of Robotics</dc:title>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Frank Pasquale, Pasquale</dc:creator>
+      <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Harvard University Press</dc:publisher>
+      <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">9780674250048</dc:identifier>
+      <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">application/epub+zip</dc:format>
+      <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">EN</dc:language>
+    </metadata>
+    <licenseToken>
+      <resource>urn:uuid:864b9db2-2749-48e2-a7f7-3d4805348ec7</resource>
+      <permissions>
+        <display>
+          <until>2025-12-18T05:36:54+00:00</until>
+        </display>
+        <play>
+          <until>2025-12-18T05:36:54+00:00</until>
+        </play>
+      </permissions>
+    </licenseToken>
+  </resourceItemInfo>
+  <hmac>AuoXs2SeI/pzZ3quGFU3VLXCMmI=</hmac>
+</fulfillmentToken>
